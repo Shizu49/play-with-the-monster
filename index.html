@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>my page</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beercss@3.4.4/dist/cdn/beer.min.css" />
-  <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.4/dist/cdn/beer.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>怪物であそぼう</title>
+
+    <!-- BeerCSS 読み込み -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beercss@3.4.4/dist/cdn/beer.min.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.4/dist/cdn/beer.min.js"></script>
 </head>
+
 <body>
-  <h1>やったー！これは君の最初のGitHub Pagesサイトだ！🎉</h1>
-  <p>世界へようこそ！</p>
+    <!-- サイド + 上部ナビゲーション -->
+    <nav class="left l m top s">
+        <header class="brand">怪物であそぼう</header>
+        <a href="#reading" class="active">読書感想</a>
+        <a href="#puzzle">パズル攻略</a>
+    </nav>
+
+    <!-- メイン -->
+    <main class="container">
+        <h1 class="center-align">ようこそ、怪物たちの遊び場へ</h1>
+
+        <section class="grid">
+            <!-- 読書感想カード -->
+            <a>
+                <article id="reading" class="card">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnPf2_Fn_ZwjFK02ISQft1_GOPbJ8LF2n0tvVlE1q95UGw3kCNRATbd1dHvxoxisMAVhXcgGhuORy8KNcDUXNaIXVpIDB-nt7Mb68Tunt2G-S9R-h-majDYWV74njqK6luqTkF01W3ZUKGVIhrXQSL6A8MkL-CCrda_4vW7EAOkcV-gCwovUWyGzt01-0/s1000-e30-rw/Thursday01b.webp" alt="本の画像" class="responsive" />
+                    <div class="content">
+                        <h5>読書感想</h5>
+                        <p>深読み？妄想？ヨブ記からミステリまで、怪物の声を聴け。</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- パズル攻略カード -->
+            <article id="puzzle" class="card">
+                <img src="puzzle.webp" alt="パズルの画像" class="responsive" />
+                <div class="content">
+                    <h5>パズル攻略</h5>
+                    <p>ユウゴウパズルやSteam系高難度、詰めた軌跡を記録。</p>
+                    <a href="/puzzle.html" class="button">攻略を見る</a>
+                </div>
+            </article>
+
+            <!-- 追加カードがあればここにどんどん書ける -->
+        </section>
+    </main>
+
+    <footer class="center-align">
+        <small>&copy; 2025 怪物であそぼう</small>
+    </footer>
 </body>
+
 </html>
