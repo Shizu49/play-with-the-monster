@@ -1,0 +1,187 @@
+body.dark {
+    --my-header-bg: #100d0b;
+    --my-orange: #fd6f6b;
+    --my-dark-orange: #b02f00;
+    --my-green: #198754;
+    /* body-background */
+    --surface: #181210;
+    --on-surface: #ede0dc;
+
+    /* font */
+    font-size: var(--size-16px);
+    line-height: 1.6;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --size-12px: 0.75rem;
+    --size-13px: 0.8125rem;
+    --size-14px: 0.875rem;
+    --size-15px: 0.9375rem;
+    --size-16px: 1rem;
+    --size-18px: 1.125rem;
+}
+
+nav {
+    background-color: var(--my-header-bg) !important;
+}
+
+.my-card h5 {
+    color: #d1ff28;
+    font-size: var(--size-16px);
+}
+
+.my-card article {
+    background: #2a3a4f !important;
+    border: 1px solid #ef7d3c !important;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.img-unit {
+    position: relative;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.img-unit2 {
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+
+}
+
+.img-unit3 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tags-unit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+}
+
+.tags-unit .chip {
+    font-size: var(--size-14px);
+    font-weight: 400;
+    block-size: 1rem;
+    min-width: 2rem;
+    padding: .3rem;
+    margin: 0;
+    gap: 0;
+    background-color: #6164ff;
+    color: #fff;
+    border: 1px solid #2c2d63;
+}
+
+.text-unit {
+    flex: 1 1 auto;
+    margin: .5rem 1rem;
+}
+
+time {
+    text-align: right;
+}
+
+/* PC、タブレット */
+@media (min-width: 601px) {
+    nav.l {
+        border-right: 1px solid #411515;
+    }
+
+    nav.l a {
+        padding: .5rem;
+        min-width: 100%;
+    }
+
+    nav.l a:hover {
+        border-radius: 30%;
+        background-color: var(--my-dark-orange);
+    }
+
+    nav.l a svg {
+        border-radius: 0;
+    }
+
+    nav.l a span {
+        font-size: var(--size-13px);
+    }
+
+    .img-unit {
+        width: 100%;
+    }
+
+    .img-unit2 {
+        padding-top: 56.25%;
+    }
+
+    .my-card article {
+        height: auto;
+    }
+
+    .my-card *+article {
+        margin-block-start: 0;
+    }
+
+    .my-card h5 {
+        font-size: var(--size-18px);
+    }
+}
+
+/* スマホのみ */
+@media (max-width: 600px) {
+    nav.s {
+        border-bottom: 1px solid #411515;
+    }
+
+    .my-card article {
+        display: flex;
+    }
+
+    section.grid {
+        ---gap: 0;
+    }
+
+    .my-card article {
+        /* img-unit2 と合わせる */
+        height: 120px;
+    }
+
+    .img-unit2 {
+        /* サムネ比率変更 */
+        width: 120%;
+        padding-top: 120%;
+        height: 0;
+    }
+
+    .text-unit {
+        margin: .5rem .5rem .5rem 25px;
+    }
+
+    .text-unit h5 {
+        margin-top: .5rem;
+    }
+
+    .text-unit p,
+    .text-unit time {
+        display: none;
+    }
+
+    .tags-unit .chip {
+        font-size: var(--size-13px);
+    }
+}
+
+.article-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border-radius: 30px;
+}
+
+.article-link:hover {
+    background-image: repeating-linear-gradient(53deg, #fe6dff40, #fe6dff40 1px, transparent 1px, transparent 6px)
+}
