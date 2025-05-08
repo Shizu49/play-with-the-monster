@@ -138,13 +138,42 @@ details>*:nth-last-child(3) {
 
 img.zukai {
   margin-top: .625rem;
+  border-radius: .5rem;
   block-size: auto;
-  inline-size: 100%;
   max-inline-size: 50rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: .5rem;
+}
+
+@media (max-width: 600px) {
+  details {
+    inline-size: 90vw;
+  }
+
+  img.zukai {
+    inline-size: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  details {
+    inline-size: 90vw;
+  }
+
+  img.zukai {
+    inline-size: 75vw;
+  }
+}
+
+@media (min-width: 993px) {
+  details {
+    inline-size: 60vw;
+  }
+
+  img.zukai {
+    inline-size: 50vw;
+  }
 }
 
 .babo {
@@ -209,10 +238,18 @@ img.zukai {
 
 .boya {
   background: var(--on-surface);
+  color: transparent;
+  user-select: none;
+}
+
+.boya :is(.my-yellow, .my-red, .my-blue, .my-orange) {
+  color: transparent;
 }
 
 .boya:hover {
   background: none;
+  color: inherit;
+  user-select: text;
   cursor: default;
 }
 
@@ -234,18 +271,22 @@ img.zukai {
   }
 }
 
-.my-yellow {
+.my-yellow,
+.boya:hover .my-yellow {
   color: #ffaf17;
 }
 
-.my-red {
-  color: #ff8585;
+.my-red,
+.boya:hover .my-red {
+  color: #ffa891;
 }
 
-.my-blue {
+.my-blue,
+.boya:hover .my-blue {
   color: #85d7ff;
 }
 
-.my-orange {
+.my-orange,
+.boya:hover .my-orange {
   color: #ef6840;
 }
