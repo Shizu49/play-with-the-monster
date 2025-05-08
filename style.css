@@ -226,4 +226,8 @@ body.dark {
         background: #0000003d;
         border-radius: 5px;
     }
+
+    img.sharp {
+        filter: url(./filter-sharp.svg#unsharp);
+    }
 }
