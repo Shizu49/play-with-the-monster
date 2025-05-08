@@ -81,7 +81,7 @@
 			<p>こいつが３マスの穴を渡れたらいいのになー。</p>
 		</div>
 
-		<img class="zukai" src="./img/mzm01-04-s500.webp" srcset="./img/mzm01-04-s500.webp 500w, ./img/mzm01-04-s760.webp 760w, ./img/mzm01-04-s1000.webp 1000w" sizes="(max-width: 600px) 90vw,(min-width: 993px) 50vw, 75vw" alt="渡れたらいいのに……" loading="lazy" width="1000" height="563" style="filter:url(../../filter-sharp.svg#sharp);" />
+		<img class="zukai" src="./img/mzm01-04-s500.webp" srcset="./img/mzm01-04-s500.webp 500w, ./img/mzm01-04-s760.webp 760w, ./img/mzm01-04-s1000.webp 1000w" sizes="(max-width: 600px) 90vw,(min-width: 993px) 50vw, 75vw" alt="渡れたらいいのに……" loading="lazy" width="1000" height="563" style="filter:url(#unsharp);" />
 
 		<div class="babo">
 			<p>解答：<span class="boya"><span class="my-red">赤</span>を落として、くっつけたらいけるよ！</span></p>
@@ -248,6 +248,15 @@
 			<p style="text-align:right; font-size:12px"><a href="/2025/04/all-game-list.html">→ 全ゲームリスト</a></p>
 		</div>
 	</div>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="unsharp">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="arithmetic"
+                   k1="0" k2="1.25" k3="-0.25" k4="0"/>
+    </filter>
+  </defs>
+</svg>
 
 	<style>
 		@import url("./yugo-puzzle.css");
